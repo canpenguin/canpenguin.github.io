@@ -1077,4 +1077,170 @@ footer {
 
 #music-toggle.muted i {
     opacity: 0.5;
-} 
+}
+
+/* 다운로드 섹션 스타일 */
+#download {
+    padding: 120px 0 60px;
+    background-color: rgba(10, 10, 10, 0.9);
+    position: relative;
+    overflow: hidden;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.prison-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    padding: 40px 0;
+}
+
+.prison-door {
+    width: 300px;
+    height: 400px;
+    background-color: rgba(20, 20, 20, 0.8);
+    border: 5px solid var(--color-gold-dark);
+    position: relative;
+    margin: 0 auto;
+    box-shadow: var(--shadow-strong), 0 0 30px rgba(138, 3, 3, 0.3);
+    cursor: pointer;
+    transition: transform 0.8s ease;
+    transform-origin: left center;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.prison-door:hover {
+    transform: rotateY(-5deg);
+    box-shadow: var(--shadow-strong), 0 0 40px rgba(138, 3, 3, 0.5);
+}
+
+.prison-door.open {
+    transform: perspective(1200px) rotateY(-85deg);
+    transition: transform 1.5s ease;
+}
+
+.bars {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background-color: var(--color-gold-dark);
+    box-shadow: 0 0 10px rgba(255, 180, 50, 0.3);
+}
+
+.bars:nth-child(1) { left: 15%; }
+.bars:nth-child(2) { left: 30%; }
+.bars:nth-child(3) { left: 45%; }
+.bars:nth-child(4) { left: 60%; }
+.bars:nth-child(5) { left: 75%; }
+.bars:nth-child(6) { right: 10%; }
+
+.door-handle {
+    position: absolute;
+    bottom: 50%;
+    right: 20px;
+    width: 30px;
+    height: 60px;
+    background-color: var(--color-gold);
+    border: 3px solid var(--color-gold-dark);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(255, 180, 50, 0.5);
+    transform: translateY(50%);
+    z-index: 2;
+}
+
+.door-handle::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: #111;
+    border-radius: 50%;
+}
+
+.prison-door::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3) 10px,
+        rgba(0, 0, 0, 0.4) 10px,
+        rgba(0, 0, 0, 0.4) 20px
+    );
+    pointer-events: none;
+}
+
+.prison-message {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--color-gold);
+    font-family: var(--font-main);
+    transition: opacity 0.5s ease;
+}
+
+.prison-message.hide {
+    opacity: 0;
+}
+
+.prison-message p {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-shadow: var(--shadow-text);
+}
+
+.prison-message .small {
+    font-size: 0.9rem;
+    color: var(--color-crimson-light);
+    font-style: italic;
+}
+
+.download-link {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-crimson-dark);
+    color: var(--color-gold);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: var(--shadow-strong), 0 0 30px rgba(138, 3, 3, 0.8);
+    opacity: 0;
+    transition: opacity 1s ease;
+    border: 2px solid var(--color-gold-dark);
+}
+
+.download-link.show {
+    display: block;
+    opacity: 1;
+    animation: pulseDownload 2s infinite;
+}
+
+@keyframes pulseDownload {
+    0%, 100% {
+        box-shadow: var(--shadow-normal), 0 0 20px rgba(138, 3, 3, 0.5);
+    }
+    50% {
+        box-shadow: var(--shadow-strong), 0 0 40px rgba(138, 3, 3, 0.8);
+    }
+}
+
+/* 추가 스타일 끝 */ 

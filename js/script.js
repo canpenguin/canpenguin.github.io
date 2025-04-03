@@ -274,6 +274,85 @@ document.addEventListener('DOMContentLoaded', function() {
     // 동적 증기 효과
     createSteamEffects();
     createSteamColumns();
+    
+    // 감옥 문 이벤트
+    const prisonDoor = document.querySelector('.prison-door');
+    const prisonContainer = document.querySelector('.prison-container');
+    const prisonMessage = document.querySelector('.prison-message');
+    
+    // 다운로드 링크 동적 생성
+    const downloadLink = document.createElement('a');
+    downloadLink.href = 'https://drive.proton.me/urls/KDWBXHNSWM#KVQYDDeBhDXh';
+    downloadLink.className = 'download-link';
+    downloadLink.textContent = '캐릭터 다운로드';
+    downloadLink.setAttribute('target', '_blank');
+    prisonContainer.appendChild(downloadLink);
+    
+    // 감옥 문 클릭 이벤트
+    prisonDoor.addEventListener('click', function() {
+        // 문이 열리는 클래스 추가
+        this.classList.add('open');
+        
+        // 손잡이에 금속 소리 효과 (오디오 요소 생성)
+        const doorSound = document.createElement('audio');
+        doorSound.src = 'sound/door-open.mp3';  // 문 열리는 소리 (선택 사항)
+        doorSound.volume = 0.5;
+        doorSound.play().catch(err => console.log('오디오 재생 에러:', err));
+        
+        // 메시지 숨기기
+        setTimeout(() => {
+            prisonMessage.classList.add('hide');
+        }, 500);
+        
+        // 다운로드 링크 표시
+        setTimeout(() => {
+            downloadLink.classList.add('show');
+            
+            // 증기 효과 생성
+            for (let i = 0; i < 8; i++) {
+                const steamEffect = document.createElement('div');
+                steamEffect.className = 'prison-steam';
+                steamEffect.style.left = `${Math.random() * 80 + 10}%`;
+                steamEffect.style.animationDelay = `${Math.random() * 0.5}s`;
+                prisonContainer.appendChild(steamEffect);
+                
+                // 애니메이션 완료 후 제거
+                setTimeout(() => {
+                    prisonContainer.removeChild(steamEffect);
+                }, 5000);
+            }
+        }, 1500);
+    });
+    
+    // 증기 효과 스타일 추가
+    const steamStyle = document.createElement('style');
+    steamStyle.textContent = `
+        .prison-steam {
+            position: absolute;
+            bottom: 100px;
+            width: 30px;
+            height: 100px;
+            background: linear-gradient(to top, rgba(255, 100, 100, 0), rgba(255, 100, 100, 0.2), rgba(255, 100, 100, 0));
+            filter: blur(10px);
+            animation: prisonSteam 4s ease-out;
+            pointer-events: none;
+        }
+        
+        @keyframes prisonSteam {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-400px) scale(3);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(steamStyle);
 });
 
 // 동적 증기 효과 생성 함수

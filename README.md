@@ -44,7 +44,7 @@ GitHub Pages를 통해 호스팅되는 스팀펑크 소설 "붉은 증기의 시
 
 1. 이 저장소를 로컬에 클론합니다:
    ```
-   git clone [저장소]
+   git clone https://github.com/yourusername/crimson-steam-age.git
    ```
 
 2. 필요한 이미지 파일과 음악 파일을 해당 폴더에 추가합니다.
