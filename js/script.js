@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 다운로드 링크 동적 생성
     const downloadLink = document.createElement('a');
-    downloadLink.href = 'https://drive.proton.me/urls/KDWBXHNSWM#KVQYDDeBhDXh';
+    downloadLink.href = 'https://drive.proton.me/urls/XNWXCAVZVR#YkTGULJRSZdB';
     downloadLink.className = 'download-link';
     downloadLink.textContent = '캐릭터 다운로드';
     downloadLink.setAttribute('target', '_blank');
