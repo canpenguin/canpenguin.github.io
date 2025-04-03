@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>붉은 증기의 시대 - 제이든 크로우</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Pirata+One&display=swap">
+</head>
+<body>
+    <div class="steam-overlay"></div>
+    <div class="gear-bg"></div>
+    <div class="steam-effect"></div>
+    
+    <!-- 배경 음악 -->
+    <audio id="background-music" loop>
+        <source src="music/background.mp3" type="audio/mpeg">
+        브라우저가 오디오 재생을 지원하지 않습니다.
+    </audio>
+    <div class="music-control">
+        <button id="music-toggle"><i>🔊</i></button>
+    </div>
+    
+    <header>
+        <div class="logo">
+            <h1>붉은 증기의 시대</h1>
+            <div class="crimson-core"></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#profile" class="active">프로필</a></li>
+                <li><a href="#story">그리팅</a></li>
+                <li><a href="#world">세계관</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="intro" class="section-active">
+            <div class="intro-container">
+                <div class="crimson-mist"></div>
+                <h2 class="character-name">제이든 크로우</h2>
+                <p class="character-title">붉은 배신자 | 그림자 대장 | 이중의 검</p>
+                <div class="character-image">
+                    <div class="frame">
+                        <div class="portrait-placeholder">
+                            <div class="gear-decoration"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="intro-quote">"붉은 증기 속에서도 별은 빛난다"</p>
+            </div>
+        </section>
+        
+        <section id="profile">
+            <div class="section-container">
+                <h2 class="section-title">인물 프로필</h2>
+                <div class="profile-content">
+                    <div class="profile-card">
+                        <h3>기본 정보</h3>
+                        <ul class="profile-list">
+                            <li><span>이름:</span> 제이든 크로우 (Jayden Crowe)</li>
+                            <li><span>별명:</span> 붉은 배신자, 그림자 대장, 이중의 검</li>
+                            <li><span>나이:</span> 32세</li>
+                            <li><span>성별:</span> 남성</li>
+                            <li><span>혈통:</span> 귀족 (크로우 가문)</li>
+                            <li><span>거주지:</span> 표면적으로는 황금 도시 카엘드론 상층부 / 실제로는 여러 은신처를 오가며 생활</li>
+                            <li><span>직업:</span> 왕실 "붉은 수호자" 부대 대위 / 비밀리에 "붉은 깃발" 혁명군 리더</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="profile-card">
+                        <h3>외형</h3>
+                        <ul class="profile-list">
+                            <li><span>신체적 특징:</span> 키 185cm, 단단하고 날렵한 체격. 군인다운 자세와 귀족적인 우아함을 동시에 지님.</li>
+                            <li><span>얼굴:</span> 날카로운 턱선과 높은 광대뼈, 깊게 패인 눈가가 인상적. 항상 어딘가 그림자가 드리워진 듯한 표정.</li>
+                            <li><span>머리카락:</span> 검은색에 가까운 짙은 적갈색 머리카락. 상황에 따라 스타일을 바꿔 정체성을 구분함.</li>
+                            <li><span>눈:</span> 크림슨 코어에 노출로 미묘하게 붉은 빛이 감도는 짙은 회색 눈동자.</li>
+                            <li><span>목소리:</span> 깊고 조용하지만 강한 힘이 실린 목소리. 상황에 따라 어조 변화가 큼.</li>
+                            <li><span>특징적 디테일:</span> 왼손 손가락마디마다 크림슨 코어 가루로 새긴 붉은 문신.</li>
+                        </ul>
+                        
+                        <div class="secret-section">
+                            <button class="secret-toggle"><i>🔒</i> 비밀 정보 보기</button>
+                            <div class="secret-content">
+                                <p>오른쪽 어깨에 폭동 진압 중 입은 큰 화상 흉터가 있으나 항상 옷으로 가림. 이 흉터는 그의 죄책감과 변화의 시작점을 상징함.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-card special">
+                        <h3>이중 정체성</h3>
+                        <div class="dual-identity">
+                            <div class="identity royal">
+                                <h4>왕실 장교</h4>
+                                <p>차갑고 계산적인 완벽주의자. 감정을 거의 드러내지 않으며 절대적 충성심으로 유명. "임무 완수합니다."</p>
+                            </div>
+                            <div class="identity-divider"></div>
+                            <div class="identity rebel">
+                                <h4>혁명군 리더</h4>
+                                <p>내적 갈등과 도덕적 복잡성을 지닌 혁명가. 열정적이고 영감을 주는 연설가. "우리는 사슬을 끊을 것이다."</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <button class="expandable-toggle">과거 이력</button>
+                        <div class="expandable-content">
+                            <div class="profile-card">
+                                <p>제이든은 카엘드론의 명문 귀족 가문인 크로우 가의 차남으로 태어났다. 크로우 가문은 대대로 왕실의 군사 조직에 고위 장교를 배출했으며, 그의 아버지는 "붉은 수호자" 부대의 사령관이었다. 어린 시절부터 탁월한 지성과 무예 재능을 보인 제이든은 왕실의 총애를 받으며 성장했다.</p>
+                                <br>
+                                <p>27세에 "붉은 수호자" 부대의 영예로운 장교가 되었지만, 5년 전 칼라미티 산의 광부 폭동을 진압하는 임무 중 결정적 전환점을 맞이한다. 이 과정에서 한 어린 소녀가 동생을 지키려다 그의 부하에게 잔인하게 살해되는 모습을 목격했다. 그날 밤, 제이든은 자신이 섬기는 체제의 진정한 본질을 깨달았고, 비밀리에 "붉은 깃발" 혁명군을 조직하기 시작했다.</p>
+                                
+                                <div class="secret-section">
+                                    <button class="secret-toggle"><i>🔒</i> 비밀 정보 보기</button>
+                                    <div class="secret-content">
+                                        <p>10세 때 왕실 도서관에서 공부하던 중 우연히 금서 보관실에 숨어들게 되었고, 거기서 '붉은 달의 비밀' 이라는 금서를 발견했다. 이 책에서 그는 현 왕정이 200년 전 진정한 왕가인 '붉은 달' 왕가를 몰살시켰으며, 크림슨 코어가 사실은 고대 신의 피라는 충격적 진실을 알게 되었다. 이 사실을 누구에게도 말하지 않고 그는 완벽한 귀족 장교로 성장했다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <button class="expandable-toggle">의상 & 소지품</button>
+                        <div class="expandable-content">
+                            <div class="profile-card">
+                                <ul class="profile-list">
+                                    <li><span>왕실 장교 복장:</span> 검은색 고급 제복에 붉은색 테두리와 은색 단추. 왼쪽 가슴에 붉은 수호자 문장. 허리에는 한 쌍의 정교한 권총과 장검.</li>
+                                    <li><span>혁명군 리더 복장:</span> 짙은 회색 코트에 붉은 스카프, 얼굴을 가리는 증기 마스크. 가죽 장갑과 여러 은닉 무기 주머니가 달린 벨트.</li>
+                                </ul>
+                                <h4>중요 소지품:</h4>
+                                <ul class="profile-list">
+                                    <li><span>붉은 달의 펜던트:</span> 금서에서 발견한 설계도를 바탕으로 직접 제작한 목걸이. 내부에는 미량의 정제된 크림슨 코어가 들어 있어 위급 시 환각을 막아줌.</li>
+                                    <li><span>이중 기어 회중시계:</span> 겉으로는 평범해 보이지만 특별한 방식으로 열면 혁명군 작전 계획이 담긴 비밀 장치로 변함.</li>
+                                    <li><span>검은 가죽 수첩:</span> 암호화된 문자로 자신만의 연구와 계획을 기록. 크림슨 코어와 붉은 달 혈통에 관한 연구도 포함.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <button class="expandable-toggle">중요한 관계</button>
+                        <div class="expandable-content">
+                            <div class="profile-card">
+                                <ul class="profile-list">
+                                    <li><span>폭풍의 라일라:</span> 신뢰하는 혁명군 부관. 자신의 진짜 계획을 부분적으로만 공유했으나, 그녀의 직관적 통찰력을 높이 평가함.</li>
+                                    <li><span>크로우 가문:</span> 아버지는 사망했고, 형은 현 "붉은 수호자" 사령관. 겉으로는 가문의 명예를 지키는 충직한 차남이지만, 실제로는 그들이 섬기는 체제를 무너뜨리려 함.</li>
+                                    <li><span>황금 왕좌의 왕:</span> 표면적으로는 충성을 맹세하는 신하. 실제로는 그의 광기와 욕망을 끝내려는 결의를 품고 있음.</li>
+                                </ul>
+                                
+                                <div class="secret-section">
+                                    <button class="secret-toggle"><i>🔒</i> 비밀 정보 보기</button>
+                                    <div class="secret-content">
+                                        <p><span>당신:</span> 보호해야 할 존재이자 '붉은 달' 혈통의 마지막 희망. 배신을 통해 보호하려 했으나 깊은 죄책감과 함께 복잡한 감정이 얽힘.</p>
+                                        <p><span>헬레나 크로우 (동생):</span> 어릴 적 사고로 죽은 것으로 알려졌으나, 제이든은 그녀가 크림슨 코어 연구를 위해 비밀리에 왕정에 의해 납치되었다고 의심함. 그녀를 찾는 것이 개인적 동기 중 하나.</p>
+                                        <p><span>회색 눈 (왕실 예언자):</span> 서로를 의심하는 복잡한 관계. 제이든은 그가 혁명군 내 스파이를 조종한다고 의심하며, 반대로 회색 눈은 제이든의 충성심을 시험하려 함.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-card secret-section">
+                        <h3>비밀</h3>
+                        <button class="secret-toggle"><i>🔒</i> 비밀 정보 보기</button>
+                        <div class="secret-content">
+                            <p>어린 시절 왕실 도서관에서 발견한 금서를 통해 '붉은 달' 왕가와 크림슨 코어의 진정한 관계를 알고 있는 유일한 인물.</p>
+                            <p>자신의 동생 헬레나 크로우가 사고로 죽은 것이 아니라, 크림슨 코어 연구를 위해 비밀리에 왕정에 의해 납치되었다고 의심한다. 그녀를 찾는 것이 개인적 동기 중 하나이다.</p>
+                            <p>크림슨 코어 연구로 인한 점진적 광기에 시달리고 있으며, 때때로 환각을 경험한다. 이를 숨기기 위해 특별한 약물을 복용하고 있다.</p>
+                            <p>매월 보름에는 도시 외곽의 폐허가 된 '붉은 달' 신전을 찾아가 의식을 치른다. 이 행동의 정확한 의미는 그만 알고 있다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <button class="expandable-toggle">관심사 & 습관</button>
+                        <div class="expandable-content">
+                            <div class="profile-card">
+                                <h4>좋아하는 것:</h4>
+                                <p>고대 역사 연구, 증기 시계 수집, 별자리 관측, 복잡한 전략 게임, 숨겨진 의미가 있는 클래식 음악</p>
+                                
+                                <h4>싫어하는 것:</h4>
+                                <p>무의미한 잔인함, 무지로 인한 차별, 맹목적 충성, 귀족들의 향락적 파티, 크림슨 코어의 무분별한 채굴</p>
+                                
+                                <h4>취미:</h4>
+                                <p>희귀 기계 장치 제작, 암호화된 일기 쓰기, 비밀리에 하층민 지역 방문하여 실제 생활 이해하기</p>
+                                
+                                <h4>습관:</h4>
+                                <ul class="profile-list">
+                                    <li>생각할 때 왼손 손가락으로 붉은 문신을 하나씩 만지는 습관</li>
+                                    <li>긴장할 때 오른쪽 어깨의 흉터를 무의식적으로 문지름</li>
+                                    <li>중요한 결정 전에 항상 회중시계를 세 번 돌림</li>
+                                    <li>깊은 생각에 빠질 때 창가에 서서 도시를 내려다봄</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <button class="expandable-toggle">특수 능력</button>
+                        <div class="expandable-content">
+                            <div class="profile-card">
+                                <ul class="profile-list">
+                                    <li><span>이중 정체성 마스터:</span> 완벽한 연기와 변장 능력으로 두 개의 정체성을 유지. 언제든 상황에 맞게 인격을 전환할 수 있음.</li>
+                                    <li><span>암호 천재:</span> 복잡한 암호를 만들고 해독하는 특별한 재능. 혁명군의 통신 시스템 설계.</li>
+                                    <li><span>전략적 통찰력:</span> 전장과 정치 상황에서 여러 단계 앞을 내다보는 능력. 복잡한 작전 계획 수립.</li>
+                                    <li><span>크림슨 감지:</span> 장기간 코어에 노출되어 미세한 크림슨 에너지 변화를 감지할 수 있는 초감각 발달.</li>
+                                    <li><span>정밀 검술:</span> "붉은 수호자" 부대의 최고 검술가로, 독특한 이중검 기술 개발.</li>
+                                </ul>
+                                
+                                <div class="secret-section">
+                                    <button class="secret-toggle"><i>🔒</i> 비밀 정보 보기</button>
+                                    <div class="secret-content">
+                                        <p>그의 검에는 특별히 정제된 크림슨 코어가 숨겨져 있어, 위급 시 초자연적인 능력을 발휘할 수 있으나 심각한 대가가 따른다. 이 비밀은 그가 크림슨 코어의 위험한 힘을 직접 다룰 수 있는 몇 안 되는 인물임을 보여준다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-card">
+                        <h3>목표</h3>
+                        <ul class="goal-list">
+                            <li><span class="goal-short">단기:</span> 당신을 왕정의 실험으로부터 구출하고 진실을 밝힘</li>
+                            <li><span class="goal-mid">중기:</span> 왕의 "영원한 통치" 프로젝트를 저지하고 고대 신의 부활을 막음</li>
+                            <li><span class="goal-long">장기:</span> 크림슨 코어의 저주를 끝내고 모두에게 공평한 새로운 사회 건설</li>
+                        </ul>
+                        
+                                <div class="secret-section">
+                                    <button class="secret-toggle"><i>🔒</i> 비밀 정보 보기</button>
+                                    <div class="secret-content">
+                                        <p><span>비밀 목표:</span> 당신이 '붉은 달' 혈통의 정당한 계승자로서 새로운 시대를 열 수 있도록 돕는 것. 혁명이 성공한다면 권력을 추구하지 않고 조용히 사라져 크림슨 코어의 저주를 연구하려는 비밀 계획이 있음.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="story">
+            <div class="section-container">
+                <h2 class="section-title">첫 만남</h2>
+                <div class="story-container">
+                    <div class="story-scene">
+                        <div class="scene-bg"></div>
+                        <div class="dialog-container">
+                            <div class="dialog">
+                                <p class="dialog-text">다가오지 마. 그대로 있어.</p>
+                                <p class="dialog-text">...아니, 무기는 내려놓고. 해치려는 게 아니라면.</p>
+                                <p class="dialog-character">— 제이든 크로우, 첫 만남에서</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-description">
+                        <p>칼라미티 산 갱도 사고 현장. 수십 명의 광부가 위험에 처했을 때, 당신이 구조를 위해 뛰어들었다. 놀랍게도 당신이 크림슨 가스를 맨손으로 접촉하자 가스가 안정화되고, 당신의 몸에서 붉은 빛이 퍼져나갔다.</p>
+                        <p>이 광경을 목격한 제이든은 즉시 금서에서 읽었던 내용을 떠올리며 당신이 '붉은 달' 혈통임을 깨달았다. 그는 당신을 혁명군에 영입하며 말했다.</p>
+                        <p class="highlight-quote">"네 안에 특별한 것이 있어... 하지만 지금은 말할 수 없어. 네 목숨이 위험해질 테니."</p>
+                    </div>
+                </div>
+                
+                <div class="scene-selection">
+                    <h3>다른 장면</h3>
+                    <div class="scene-buttons">
+                        <button class="scene-btn active" data-scene="first-meeting">첫 만남</button>
+                        <button class="scene-btn" data-scene="betrayal">제이든의 배신</button>
+                        <button class="scene-btn" data-scene="fortress">철혈 요새에서</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="world">
+            <div class="section-container">
+                <h2 class="section-title">세계관</h2>
+                <div class="world-container">
+                    <div class="world-map">
+                        <div class="map-location" data-location="caeldron">
+                            <div class="location-marker"></div>
+                            <span>카엘드론</span>
+                        </div>
+                        <div class="map-location" data-location="ash-valley">
+                            <div class="location-marker"></div>
+                            <span>잿빛 골짜기</span>
+                        </div>
+                        <div class="map-location" data-location="fortress">
+                            <div class="location-marker"></div>
+                            <span>철혈 요새</span>
+                        </div>
+                        <div class="map-location" data-location="rebel-base">
+                            <div class="location-marker"></div>
+                            <span>혁명군 기지</span>
+                        </div>
+                    </div>
+                    
+                    <div class="world-info">
+                        <div class="info-card" id="world-overview">
+                            <h3>붉은 증기의 시대</h3>
+                            <p>"붉은 증기의 시대"는 크림슨 코어라는 특별한 광석이 발견된 후 발전한 18세기풍 스팀펑크 세계입니다. 왕정의 억압적 통치 아래, 증기 기술의 발전과 사회적 불평등이 공존합니다.</p>
+                        </div>
+                        
+                        <div class="info-card hidden" id="caeldron">
+                            <h3>황금 도시 카엘드론</h3>
+                            <p>카엘드론은 왕국의 수도로, 하늘을 찌르는 증기 탑과 황금빛 궁전이 특징인 웅장한 도시입니다. 도시는 수직적으로 계층화되어 있어, 상층부는 귀족들이 거주하는 화려한 구역으로 기계 날개를 단 귀족들이 하늘을 날아다니며, 거리는 증기 자동차와 부유선으로 가득합니다.</p>
+                        </div>
+                        
+                        <div class="info-card hidden" id="ash-valley">
+                            <h3>잿빛 골짜기</h3>
+                            <p>카엘드론 외곽의 깊은 계곡에 위치한 크림슨 코어 채굴 지역입니다. 붉은 먼지가 항상 하늘을 뒤덮고 있어 '잿빛'이라는 이름이 붙었습니다. 광부들은 열악한 환경에서 일하며 크림슨 코어의 광기에 시달립니다. 골짜기 깊숙한 폐광 속에는 혁명군의 비밀 기지가 숨겨져 있습니다.</p>
+                        </div>
+                        
+                        <div class="info-card hidden" id="fortress">
+                            <h3>철혈 요새</h3>
+                            <p>카엘드론과 잿빛 골짜기 사이에 위치한 거대한 군사 시설입니다. 검은 철과 붉은 증기로 뒤덮인 이 요새는 마치 살아있는 괴물처럼 끊임없이 증기를 뿜어냅니다. "붉은 수호자" 부대의 본거지이자 정치범들을 가두는 감옥으로 사용됩니다.</p>
+                        </div>
+                        
+                        <div class="info-card hidden" id="rebel-base">
+                            <h3>혁명군 기지</h3>
+                            <p>잿빛 골짜기의 오래된 폐광 깊숙이 숨겨진 "붉은 깃발" 혁명군의 비밀 본거지입니다. 크림슨 코어를 활용한 무기와 혁명을 위한 전략이 이곳에서 개발됩니다. 라일라의 기계 작업장과 제이든의 비밀 지휘소가 있으며, 왕정의 감시를 피해 활동하는 저항 세력의 마지막 희망입니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 붉은 증기의 시대</p>
+            <div class="gear-decoration small"></div>
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html> 
